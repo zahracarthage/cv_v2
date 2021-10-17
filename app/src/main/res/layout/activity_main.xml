@@ -7,7 +7,105 @@
     tools:context=".MainActivity">
 
 
+    <RelativeLayout
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp"
+        android:background="@drawable/background_border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.278"
 
+
+        >
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:text="name"
+
+            />
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:text="email"
+
+            />
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/email"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+
+            />
+        <TextView
+            android:id="@+id/HF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/age"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+
+            />
+        <TextView
+            android:id="@+id/AndroidSkill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/HF"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+
+            />
+        <TextView
+            android:id="@+id/IOsSkill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/AndroidSkill"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+
+            />
+        <TextView
+            android:id="@+id/FlutterSkill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/IOsSkill"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+
+            />
+
+        <TextView
+            android:id="@+id/languages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/FlutterSkill"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+
+            />
+        <TextView
+            android:id="@+id/hobbies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/languages"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+
+            />
+    </RelativeLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

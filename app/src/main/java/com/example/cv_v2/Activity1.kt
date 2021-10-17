@@ -31,8 +31,12 @@ class Activity1 : AppCompatActivity() {
        {
             val intent = Intent(applicationContext,HobbiesActivity::class.java)
 
+           intent.putExtra("fullName", binding.fullName.text.toString())
+           intent.putExtra("Email", binding.email.text.toString())
+           intent.putExtra("Age", binding.Age.text.toString())
+           intent.putExtra("Gender", binding.gender.text.toString())
 
-            startActivity(intent)
+           startActivity(intent)
             finish()
       }
 

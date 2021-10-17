@@ -93,7 +93,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="60dp"
-                    android:text="Flutter"
+                    android:text="Ios"
                     />
 
                 <SeekBar
@@ -112,7 +112,7 @@
     <RelativeLayout
         android:id="@+id/layout3"
         android:layout_width="0dp"
-        android:layout_height="180dp"
+        android:layout_height="150dp"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
         android:background="@drawable/background_border"
@@ -144,10 +144,102 @@
             android:layout_margin="16dp"
 
             >
+            <CheckBox
+                android:id="@+id/arabic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:checked="true"
+                android:text="Arabic"/>
+            <CheckBox
+                android:id="@+id/french"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="130dp"
+                android:text="French"/>
+            <CheckBox
+                android:id="@+id/english"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="245dp"
+                android:text="English"/>
 
 
         </RelativeLayout>
 
 
     </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout4"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/background_border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout3"
+        app:layout_constraintVertical_bias="0.098">
+
+        <TextView
+            android:id="@+id/Hobbies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="15dp"
+            android:text="Hobbies"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+
+
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/Hobbies"
+            android:layout_margin="16dp"
+
+            >
+            <CheckBox
+                android:id="@+id/music"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:checked="true"
+                android:text="Music"/>
+            <CheckBox
+                android:id="@+id/sport"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="130dp"
+                android:text="Sport"/>
+            <CheckBox
+                android:id="@+id/games"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="245dp"
+                android:text="Games"/>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+  <Button
+      android:id="@+id/textButton"
+      android:layout_width="360dp"
+      android:layout_height="50dp"
+      android:text="Submit"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/layout4"
+      android:layout_marginTop="20dp"
+      android:onClick="next"
+      />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
