@@ -11,10 +11,8 @@
         android:theme="@style/Theme.Cv_v2">
         <activity android:name=".HobbiesActivity"></activity>
         <activity android:name=".Activity1" />
-        <activity
-            android:name=".ActivityOne"
-            android:label="@string/title_activity_one"
-            android:theme="@style/Theme.Cv_v2.NoActionBar" />
+
+
         <activity android:name=".MainActivity" />
         <activity
             android:name=".splash_screen"
@@ -26,5 +24,9 @@
             </intent-filter>
         </activity>
     </application>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
 
 </manifest>

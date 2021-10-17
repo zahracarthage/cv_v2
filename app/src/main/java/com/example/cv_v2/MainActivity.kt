@@ -2,7 +2,10 @@ package com.example.cv_v2
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.widget.Button
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.cv_v2.databinding.ActivityMainBinding
 
@@ -15,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+     //   setContentView(R.layout.activity_main)
 
 
         //get intent
@@ -33,14 +37,19 @@ class MainActivity : AppCompatActivity() {
         val Sport = intent.getStringExtra("Sport")
         val games = intent.getStringExtra("Games")
 
+        val pic = intent.getStringExtra("Image")
+        println("pic : $pic")
+
+        val myUri =Uri.parse(pic);
+        println("myUri : $myUri")
+
+        binding.profileImg.setImageURI(myUri)
+
+        binding.name.text="$fname"
+        binding.email.text="$email"
 
 
-        //   binding.name.setText(arabic)
-      //  binding.HF.setText(fname)
-
-        binding.name.text="name : $fname"
-        binding.email.text="Email : $email"
-        binding.age.text="Age : $age"
+     /*   binding.age.text="Age : $age"
         binding.HF.text="Gender : $gender"
         binding.languages.text="languages : $arabic"
         binding.AndroidSkill.text="Android skill : $Android"
@@ -48,6 +57,7 @@ class MainActivity : AppCompatActivity() {
         binding.FlutterSkill.text="Flutter skill : $Flutter"
         binding.languages.text="Languages : $arabic $English $French"
         binding.hobbies.text="Hobbies : $Music $Sport $games"
+    */
     }
 
 

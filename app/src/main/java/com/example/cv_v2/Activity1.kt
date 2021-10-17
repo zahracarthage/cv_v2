@@ -1,11 +1,14 @@
 package com.example.cv_v2
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
+import android.provider.MediaStore
 import android.text.TextUtils
 import android.util.Patterns
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.example.cv_v2.databinding.Activity1Binding
 
@@ -13,7 +16,7 @@ import com.example.cv_v2.databinding.Activity1Binding
 class Activity1 : AppCompatActivity() {
 
     private lateinit var binding: Activity1Binding
-
+    private var uri: Uri? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,16 +38,16 @@ class Activity1 : AppCompatActivity() {
            intent.putExtra("Email", binding.email.text.toString())
            intent.putExtra("Age", binding.Age.text.toString())
            intent.putExtra("Gender", binding.gender.text.toString())
+           intent.putExtra("Image", uri.toString())
 
            startActivity(intent)
             finish()
       }
 
 
-
-
     }
     private fun check(): Boolean {
+
         if(binding.fullName.text.isNullOrEmpty())
         {
             Toast.makeText(applicationContext,"please Enter your full name",Toast.LENGTH_SHORT).show()
@@ -72,4 +75,23 @@ class Activity1 : AppCompatActivity() {
         }
         else return true
     }
+
+    private val pickImage = 100
+
+    fun addImg(view: android.view.View) {
+        val gallery = Intent(Intent.ACTION_OPEN_DOCUMENT, MediaStore.Images.Media.INTERNAL_CONTENT_URI)
+        startActivityForResult(gallery, pickImage)
+
+    }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (resultCode == RESULT_OK && data != null) {
+            val imageUri:Uri? = data.data
+            binding.acctImg.setImageURI(imageUri)
+            uri = imageUri
+        }
+        else {binding.textButton.isEnabled=false
+            Toast.makeText(getApplicationContext(),"choose an image", Toast.LENGTH_SHORT).show() }
+    }
+
 }

@@ -7,105 +7,44 @@
     tools:context=".MainActivity">
 
 
-    <RelativeLayout
-        android:id="@+id/result"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="15dp"
-        android:background="@drawable/background_border"
-        app:layout_constraintBottom_toBottomOf="parent"
+        <ImageView
+            android:id="@+id/profileImg"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:srcCompat="@tools:sample/avatars"            app:layout_constraintHorizontal_bias="0.436"
+            app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="name"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"
+
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintHorizontal_bias="0.463"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.278"
+        app:layout_constraintTop_toBottomOf="@+id/profileImg" />
 
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="parent"
 
-        >
-
-        <TextView
-            android:id="@+id/name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="15dp"
-            android:text="name"
-
-            />
-        <TextView
-            android:id="@+id/email"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/name"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="15dp"
-            android:text="email"
-
-            />
-        <TextView
-            android:id="@+id/age"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/email"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="15dp"
-
-            />
-        <TextView
-            android:id="@+id/HF"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/age"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="15dp"
-
-            />
-        <TextView
-            android:id="@+id/AndroidSkill"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/HF"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="15dp"
-
-            />
-        <TextView
-            android:id="@+id/IOsSkill"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/AndroidSkill"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="15dp"
-
-            />
-        <TextView
-            android:id="@+id/FlutterSkill"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/IOsSkill"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="15dp"
-
-            />
-
-        <TextView
-            android:id="@+id/languages"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/FlutterSkill"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="15dp"
-
-            />
-        <TextView
-            android:id="@+id/hobbies"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/languages"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="15dp"
-
-            />
-    </RelativeLayout>
+        app:layout_constraintTop_toBottomOf="@+id/name" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

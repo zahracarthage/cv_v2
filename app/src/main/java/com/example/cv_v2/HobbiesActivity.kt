@@ -23,6 +23,7 @@ class HobbiesActivity : AppCompatActivity() {
         if (bundle != null) {
             intent.putExtras(bundle);
         }
+
         intent.putExtra("Android", binding.androidBar.progress.toString())
         intent.putExtra("Ios", binding.IosBar.progress.toString())
         intent.putExtra("Flutter", binding.FlutterSkill.progress.toString())
