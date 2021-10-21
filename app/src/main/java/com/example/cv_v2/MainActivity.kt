@@ -1,12 +1,9 @@
 package com.example.cv_v2
 
-import android.annotation.SuppressLint
-import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.widget.Button
-import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.example.cv_v2.databinding.ActivityMainBinding
 
 
@@ -23,6 +20,10 @@ class MainActivity : AppCompatActivity() {
 
         //get intent
         val intent = intent
+        val androidprogress = intent.getIntExtra("AndroidSkill",1)
+        val iosprogress = intent.getIntExtra("iosSkill",1)
+        val flutterprogress = intent.getIntExtra("flutterSkill",1)
+
         val arabic = intent.getStringExtra("Arabic")
         val fname=intent.getStringExtra("fullName")
         val email = intent.getStringExtra("Email")
@@ -44,23 +45,55 @@ class MainActivity : AppCompatActivity() {
         println("myUri : $myUri")
 
         binding.profileImg.setImageURI(myUri)
-
         binding.name.text="$fname"
         binding.email.text="$email"
 
 
-     /*   binding.age.text="Age : $age"
-        binding.HF.text="Gender : $gender"
-        binding.languages.text="languages : $arabic"
-        binding.AndroidSkill.text="Android skill : $Android"
-        binding.IOsSkill.text="Ios skill : $IOS"
-        binding.FlutterSkill.text="Flutter skill : $Flutter"
-        binding.languages.text="Languages : $arabic $English $French"
-        binding.hobbies.text="Hobbies : $Music $Sport $games"
-    */
+
+
+
+
+
+
+        //val SkillsFrag = FragmentClass()
+        //SkillsFrag.setArguments()
+
+
+        /*   binding.age.text="Age : $age"
+            binding.HF.text="Gender : $gender"
+            binding.languages.text="languages : $arabic"
+            binding.AndroidSkill.text="Android skill : $Android"
+            binding.IOsSkill.text="Ios skill : $IOS"
+            binding.FlutterSkill.text="Flutter skill : $Flutter"
+            binding.languages.text="Languages : $arabic $English $French"
+            binding.hobbies.text="Hobbies : $Music $Sport $games"
+        */
+        val bundle = intent.getBundleExtra("bundle")
+
+        val androidskill = bundle?.getInt("Android")
+        val flutterskill = bundle?.getInt("Flutter")
+        val iosskill = bundle?.getInt("IOS")
+
+
+        fun SkillsFrag(view: android.view.View) {
+            replaceFrag(Skillsfrag.newInstance(androidprogress,iosprogress,flutterprogress))
+
+        }
+        fun HobbiesFrag(view: android.view.View) {}
+        fun LangFrag(view: android.view.View) {}
+
     }
 
 
+    private fun replaceFrag(fragment: Fragment)
+    {
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
 
+        fragmentTransaction.replace(R.id.fragmentContainer, fragment)
+        fragmentTransaction.commit()
 
     }
+
+}
+

@@ -39,6 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:text="email"
         android:textColor="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.464"
@@ -46,5 +47,60 @@
 
         app:layout_constraintTop_toBottomOf="@+id/name" />
 
+    <Button
+        android:id="@+id/btnSkills"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:text="SKILLS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.01"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        android:onClick="SkillsFrag"/>
+
+    <Button
+        android:id="@+id/btnHobbies"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="HOBBIES"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toEndOf="@+id/btnSkills"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        android:onClick="HobbiesFrag"/>
+
+    <Button
+        android:id="@+id/btnLanguages"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="LANGUAGES"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintStart_toEndOf="@+id/btnHobbies"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        android:layout_marginEnd="7dp"
+        android:onClick="LangFrag"/>
+
+    <RelativeLayout
+        android:id="@+id/fraglayout"
+        android:layout_width="380dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnHobbies"
+        android:background="@drawable/background_border"
+        >
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,6 +23,9 @@ class HobbiesActivity : AppCompatActivity() {
         if (bundle != null) {
             intent.putExtras(bundle);
         }
+        intent.putExtra("AndroidSkill", binding.androidBar.progress)
+        intent.putExtra("iosSkill",binding.IosBar.progress)
+        intent.putExtra("flutterSkill",binding.FlutterSkill.progress)
 
         intent.putExtra("Android", binding.androidBar.progress.toString())
         intent.putExtra("Ios", binding.IosBar.progress.toString())
