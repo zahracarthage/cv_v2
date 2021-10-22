@@ -39,6 +39,7 @@ class Activity1 : AppCompatActivity() {
            intent.putExtra("Age", binding.Age.text.toString())
            intent.putExtra("Gender", binding.gender.text.toString())
            intent.putExtra("Image", uri.toString())
+           print(uri.toString())
 
            startActivity(intent)
             finish()

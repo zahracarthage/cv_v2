@@ -205,13 +205,14 @@
             android:layout_margin="16dp"
 
             >
+
             <CheckBox
                 android:id="@+id/music"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="15dp"
                 android:checked="true"
-                android:text="Music"/>
+                android:text="Music" />
             <CheckBox
                 android:id="@+id/sport"
                 android:layout_width="match_parent"

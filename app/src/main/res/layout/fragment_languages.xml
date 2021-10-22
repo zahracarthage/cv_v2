@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LanguagesFrag">
+
+    <TextView
+        android:id="@+id/languages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="15dp"
+        android:text="Languages"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+
+
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/languages"
+        android:layout_margin="16dp"
+
+        >
+        <CheckBox
+            android:id="@+id/arabic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:checked="true"
+            android:text="Arabic"/>
+        <CheckBox
+            android:id="@+id/french"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="130dp"
+            android:text="French"/>
+        <CheckBox
+            android:id="@+id/english"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="245dp"
+            android:text="English"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

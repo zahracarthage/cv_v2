@@ -19,6 +19,7 @@ class HobbiesActivity : AppCompatActivity() {
 
 
         val intent = Intent(applicationContext,MainActivity::class.java)
+
         val bundle = getIntent().extras
         if (bundle != null) {
             intent.putExtras(bundle);
@@ -30,16 +31,22 @@ class HobbiesActivity : AppCompatActivity() {
         intent.putExtra("Android", binding.androidBar.progress.toString())
         intent.putExtra("Ios", binding.IosBar.progress.toString())
         intent.putExtra("Flutter", binding.FlutterSkill.progress.toString())
+
+
         if(binding.arabic.isChecked)
         {
             intent.putExtra("Arabic", binding.arabic.text.toString()    )
+            intent.putExtra("ArabicCheck", binding.arabic.isChecked)
 
         }
         else             intent.putExtra("Arabic", "")
 
+
         if(binding.english.isChecked)
         {
             intent.putExtra("English", binding.english.text.toString())
+            intent.putExtra("EnglishCheck", binding.english.isChecked)
+
 
         }
         else             intent.putExtra("English", "")
@@ -47,6 +54,8 @@ class HobbiesActivity : AppCompatActivity() {
         if(binding.french.isChecked)
         {
             intent.putExtra("French", binding.french.text.toString())
+            intent.putExtra("FrenchCheck", binding.french.isChecked)
+
 
         }
         else             intent.putExtra("French", "")
@@ -54,6 +63,8 @@ class HobbiesActivity : AppCompatActivity() {
         if(binding.music.isChecked)
         {
             intent.putExtra("Music", binding.music.text.toString())
+            intent.putExtra("MusicCheck", binding.music.isChecked)
+
 
         }
         else             intent.putExtra("Music", "")
@@ -61,6 +72,9 @@ class HobbiesActivity : AppCompatActivity() {
         if(binding.sport.isChecked)
         {
             intent.putExtra("Sport", binding.sport.text.toString())
+            intent.putExtra("SportCheck", binding.sport.isChecked)
+
+
 
         }
         else             intent.putExtra("Sport", "")
@@ -68,6 +82,8 @@ class HobbiesActivity : AppCompatActivity() {
         if(binding.games.isChecked)
         {
             intent.putExtra("Games", binding.games.text.toString())
+            intent.putExtra("GamesCheck", binding.games.isChecked)
+
 
         }
         else             intent.putExtra("Games", "")

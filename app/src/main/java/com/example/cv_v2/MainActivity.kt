@@ -20,10 +20,10 @@ class MainActivity : AppCompatActivity() {
 
         //get intent
         val intent = intent
-        val androidprogress = intent.getIntExtra("AndroidSkill",1)
-        val iosprogress = intent.getIntExtra("iosSkill",1)
-        val flutterprogress = intent.getIntExtra("flutterSkill",1)
 
+        val ass = intent.getIntExtra("AndroidSkill",1)
+        val ioss = intent.getIntExtra("iosSkill",1)
+        val fss= intent.getIntExtra("flutterSkill",1)
         val arabic = intent.getStringExtra("Arabic")
         val fname=intent.getStringExtra("fullName")
         val email = intent.getStringExtra("Email")
@@ -41,22 +41,14 @@ class MainActivity : AppCompatActivity() {
         val pic = intent.getStringExtra("Image")
         println("pic : $pic")
 
-        val myUri =Uri.parse(pic);
+        val myUri = Uri.parse(pic);
         println("myUri : $myUri")
+
 
         binding.profileImg.setImageURI(myUri)
         binding.name.text="$fname"
         binding.email.text="$email"
 
-
-
-
-
-
-
-
-        //val SkillsFrag = FragmentClass()
-        //SkillsFrag.setArguments()
 
 
         /*   binding.age.text="Age : $age"
@@ -74,13 +66,7 @@ class MainActivity : AppCompatActivity() {
         val flutterskill = bundle?.getInt("Flutter")
         val iosskill = bundle?.getInt("IOS")
 
-
-        fun SkillsFrag(view: android.view.View) {
-            replaceFrag(Skillsfrag.newInstance(androidprogress,iosprogress,flutterprogress))
-
-        }
-        fun HobbiesFrag(view: android.view.View) {}
-        fun LangFrag(view: android.view.View) {}
+        replaceFrag(Skillsfrag.newInstance(intent.getIntExtra("AndroidSkill",1),intent.getIntExtra("iosSkill",1),intent.getIntExtra("flutterSkill",1)))
 
     }
 
@@ -94,6 +80,25 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.commit()
 
     }
+
+    fun SkillsFrag(view: android.view.View) {
+        replaceFrag(Skillsfrag.newInstance(intent.getIntExtra("AndroidSkill",1),intent.getIntExtra("iosSkill",1),intent.getIntExtra("flutterSkill",1)))
+
+    }
+
+    fun HobbiesFrag(view: android.view.View) {
+        replaceFrag(HobbiesFrag.newInstance(intent.getBooleanExtra("MusicCheck",false),intent.getBooleanExtra("SportCheck",false),intent.getBooleanExtra("GamesCheck",false)))
+
+
+    }
+    fun LangFrag(view: android.view.View) {
+
+        replaceFrag(LanguagesFrag.newInstance(intent.getBooleanExtra("ArabicCheck",false),intent.getBooleanExtra("EnglishCheck",false),intent.getBooleanExtra("FrenchCheck",false)))
+
+
+    }
+
+
 
 }
 

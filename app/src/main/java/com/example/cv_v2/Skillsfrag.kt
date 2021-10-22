@@ -44,12 +44,16 @@ class Skillsfrag : Fragment() {
             iosskill=arguments?.getInt(arg_Ios_skill)
             flutterksill= arguments?.getInt(arg_flutter_skill)
 
-
         }
 
         androidSkill.progress = androidskill ?:0
         IosSkill.progress = iosskill ?:0
         flutterSkill.progress = flutterksill ?:0
+
+
+        androidSkill.isEnabled=false;
+        IosSkill.isEnabled=false;
+        flutterSkill.isEnabled=false;
 
 
 
